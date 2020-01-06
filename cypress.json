@@ -1,0 +1,8 @@
+{
+    "testFiles": "**/*.cypress.js",
+    "integrationFolder": "./src",
+    "supportFile": "./.cypress/support",
+    "watchForFileChanges": true,
+    "video": false,
+    "baseUrl": "http://localhost:6006"
+}
