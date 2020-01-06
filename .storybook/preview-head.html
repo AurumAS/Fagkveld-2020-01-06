@@ -1,0 +1,19 @@
+<script>
+    var data = {};
+    function addEvent(event) {
+        console.log('[storybook] Events: adding event to events', event);
+        window.GLOBAL.events = {
+            ...(window.GLOBAL.events || {}),
+            [event]: (...args) => {
+                console.log(`${event} called with`, args);
+            }
+        };
+        console.log('storybook', window.GLOBAL.events);
+    }
+    window.GLOBAL = {
+        events: {},
+        addEvent: addEvent,
+        data: data
+    };
+    window.dataLayer = window.dataLayer || [];
+</script>
